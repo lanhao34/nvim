@@ -1,1 +1,1 @@
- nnoremap <silent> <C-/> <cmd>NERDCommenterToggle<CR>
+nnoremap <silent> <C-_> <cmd>NERDCommenterToggle<CR>

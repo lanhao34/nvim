@@ -18,7 +18,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim' " required by telescope
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
-Plug 'hkupty/nvimux'
+"Plug 'hkupty/nvimux'
 " Plug 'scrooloose/nerdtree'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " Plug 'bigeagle/molokai'
@@ -150,7 +150,7 @@ vmap j gj
 vmap k gk
 nmap j gj
 nmap k gk
-
+tnoremap <Esc> <C-\><C-n>
 nmap T :tabnew<cr>
 
 au FileType c,cpp,h,java,css,js,nginx,scala,go inoremap  <buffer>  {<CR> {<CR>}<Esc>O
@@ -182,6 +182,6 @@ endfunction
 source ~/.config/nvim/config/telescope.vim
 source ~/.config/nvim/config/barbar.vim
 source ~/.config/nvim/config/coc.vim
-source ~/.config/nvim/config/nerdcommenter.vim
+"source ~/.config/nvim/config/nerdcommenter.vim
 "source ~/.config/nvim/config/denite.vim
 source ~/.config/nvim/init.lua.vim
