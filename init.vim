@@ -180,10 +180,10 @@ function ScriptHeader()
     normal ''
 endfunction
 
-" source ~/.config/nvim/config/nerdtree.vim
-source ~/.config/nvim/config/telescope.vim
-source ~/.config/nvim/config/barbar.vim
-source ~/.config/nvim/config/coc.vim
-"source ~/.config/nvim/config/nerdcommenter.vim
-"source ~/.config/nvim/config/denite.vim
-source ~/.config/nvim/init.lua.vim
+" runtime config/nerdtree.vim
+runtime config/telescope.vim
+runtime config/barbar.vim
+runtime config/coc.vim
+"runtime config/nerdcommenter.vim
+"runtime config/denite.vim
+runtime init.lua.vim
