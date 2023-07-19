@@ -3,7 +3,7 @@ nnoremap <SPACE> <Nop>
 let mapleader = "\<space>"
 
 set hidden
-set relativenumber number
+set number
 set nocp
 filetype off
 set nocompatible
@@ -39,13 +39,13 @@ Plug 'nvim-tree/nvim-web-devicons' " optional
   "Plug 'Shougo/denite.nvim'
   "Plug 'roxma/nvim-yarp'
   "Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'jiangmiao/auto-pairs'
 "endif
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+Plug 'windwp/nvim-autopairs'
 call plug#end()
 
 " colorscheme nightfox
@@ -78,7 +78,7 @@ set incsearch
 set clipboard=unnamed
 
 " vim-rainbow
-" let g:rainbow_active = 1
+let g:rainbow_active = 1
 
 set undodir=~/.vim/undo
 set undofile
@@ -193,4 +193,5 @@ runtime config/coc.vim
 "runtime config/nerdcommenter.vim
 "runtime config/denite.vim
 "runtime init.lua.vim
-lua require("toggleterm").setup()
+runtim config/toggleterm.vim
+lua require("nvim-autopairs").setup {}
