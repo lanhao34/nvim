@@ -11,14 +11,17 @@ set nocompatible
 call plug#begin()
 " Plug 'junegunn/fzf.vim'
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'frazrepo/vim-rainbow'
+Plug 'frazrepo/vim-rainbow'
 " Plug 'junegunn/vim-peekaboo'
 " Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim' " required by telescope
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'debugloop/telescope-undo.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-telescope/telescope-file-browser.nvim'
 "Plug 'hkupty/nvimux'
 " Plug 'scrooloose/nerdtree'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -29,17 +32,20 @@ Plug 'nvim-tree/nvim-web-devicons' " OPTIONAL: for file icons
 Plug 'romgrk/barbar.nvim'
 Plug 'preservim/nerdcommenter'
 Plug 'nvim-tree/nvim-web-devicons' " optional
-Plug 'nvim-tree/nvim-tree.lua'
+"Plug 'nvim-tree/nvim-tree.lua'
 "if has('nvim')
   "Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 "else
   "Plug 'Shougo/denite.nvim'
   "Plug 'roxma/nvim-yarp'
   "Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'jiangmiao/auto-pairs'
 "endif
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-surround'
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 call plug#end()
 
 " colorscheme nightfox
@@ -186,4 +192,5 @@ runtime config/barbar.vim
 runtime config/coc.vim
 "runtime config/nerdcommenter.vim
 "runtime config/denite.vim
-runtime init.lua.vim
+"runtime init.lua.vim
+lua require("toggleterm").setup()
