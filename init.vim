@@ -11,7 +11,7 @@ set nocompatible
 call plug#begin()
 " Plug 'junegunn/fzf.vim'
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'frazrepo/vim-rainbow'
+" Plug 'frazrepo/vim-rainbow'
 " Plug 'junegunn/vim-peekaboo'
 " Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-fugitive'
@@ -26,19 +26,19 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
 " Plug 'scrooloose/nerdtree'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " Plug 'bigeagle/molokai'
-"Plug 'EdenEast/nightfox.nvim'
+Plug 'EdenEast/nightfox.nvim'
 Plug 'lewis6991/gitsigns.nvim' " OPTIONAL: for git status
 Plug 'nvim-tree/nvim-web-devicons' " OPTIONAL: for file icons
 Plug 'romgrk/barbar.nvim'
 Plug 'preservim/nerdcommenter'
 Plug 'nvim-tree/nvim-web-devicons' " optional
-"Plug 'nvim-tree/nvim-tree.lua'
+Plug 'nvim-tree/nvim-tree.lua'
 "if has('nvim')
-  "Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+ ""Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 "else
-  "Plug 'Shougo/denite.nvim'
-  "Plug 'roxma/nvim-yarp'
-  "Plug 'roxma/vim-hug-neovim-rpc'
+ ""Plug 'Shougo/denite.nvim'
+ ""Plug 'roxma/nvim-yarp'
+ ""Plug 'roxma/vim-hug-neovim-rpc'
 "endif
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -48,7 +48,7 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'windwp/nvim-autopairs'
 call plug#end()
 
-" colorscheme nightfox
+colorscheme nightfox
 " UI
 " if !exists("g:vimrc_loaded")
 "     colorscheme molokai
@@ -78,7 +78,7 @@ set incsearch
 set clipboard=unnamed
 
 " vim-rainbow
-let g:rainbow_active = 1
+"let g:rainbow_active = 1
 
 set undodir=~/.vim/undo
 set undofile
@@ -105,8 +105,8 @@ endif
 
 set autoindent
 set modeline
-set cursorline
-set cursorcolumn
+"set cursorline
+"set cursorcolumn
 
 set shiftwidth=4
 set tabstop=4
@@ -187,11 +187,13 @@ function ScriptHeader()
 endfunction
 
 " runtime config/nerdtree.vim
+runtime config/nerdcommenter.vim
+"runtime config/denite.vim
+"runtime init.lua.vim
 runtime config/telescope.vim
 runtime config/barbar.vim
 runtime config/coc.vim
-"runtime config/nerdcommenter.vim
-"runtime config/denite.vim
-"runtime init.lua.vim
 runtim config/toggleterm.vim
 lua require("nvim-autopairs").setup {}
+runtime config/toggleterm.lua
+

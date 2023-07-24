@@ -1,4 +1,3 @@
-lua << EOF
 require("toggleterm").setup{
 	open_mapping = [[<leader>t]],
 	direction = "float",
@@ -7,4 +6,3 @@ require("toggleterm").setup{
 	},
 	shell =  vim.o.shell,
 }
-EOF
