@@ -29,7 +29,8 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'EdenEast/nightfox.nvim'
 Plug 'lewis6991/gitsigns.nvim' " OPTIONAL: for git status
 Plug 'nvim-tree/nvim-web-devicons' " OPTIONAL: for file icons
-Plug 'romgrk/barbar.nvim'
+"Plug 'romgrk/barbar.nvim'
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 Plug 'preservim/nerdcommenter'
 Plug 'nvim-tree/nvim-web-devicons' " optional
 Plug 'nvim-tree/nvim-tree.lua'
@@ -46,6 +47,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'windwp/nvim-autopairs'
+Plug 'stevearc/dressing.nvim'
 call plug#end()
 
 colorscheme nightfox
@@ -186,14 +188,14 @@ function ScriptHeader()
     normal ''
 endfunction
 
-" runtime config/nerdtree.vim
+runtime config/neotree.lua
 runtime config/nerdcommenter.vim
 "runtime config/denite.vim
 "runtime init.lua.vim
 runtime config/telescope.vim
-runtime config/barbar.vim
+"runtime config/barbar.vim
 runtime config/coc.vim
-runtim config/toggleterm.vim
 lua require("nvim-autopairs").setup {}
 runtime config/toggleterm.lua
-
+set termguicolors
+lua require("bufferline").setup{}

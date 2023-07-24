@@ -14,7 +14,18 @@ nnoremap <silent> <Leader>h: <cmd>Telescope command_history<CR>
 nnoremap <silent> <Leader>h/ <cmd>Telescope search_history<CR>
 
 lua << EOF
-require'telescope'.load_extension('fzf')
-require("telescope").load_extension "file_browser"
-require'telescope'.load_extension('undo')
+require('telescope').setup {
+  extensions = {
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                       -- the default case_mode is "smart_case"
+    }
+  }
+}
+require('telescope').load_extension('fzf')
+require("telescope").load_extension("file_browser")
+require('telescope').load_extension('undo')
 EOF
