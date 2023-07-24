@@ -1,5 +1,6 @@
 let g:python_host_prog = 'user/bin/python'
-"let mapleader = "\<space>"
+nnoremap <SPACE> <Nop>
+let mapleader = "\<space>"
 
 set hidden
 set relativenumber number
@@ -63,7 +64,6 @@ call plug#end()
 inoremap <c-u> <c-g>u<c-u>
 inoremap <c-w> <c-g>u<c-w>
 inoremap kj <esc>
-" nnoremap <SPACE> <Nop>
 
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 
